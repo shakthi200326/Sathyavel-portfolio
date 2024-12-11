@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>facebook sign up</title>
+    <style>
+        body,h1,h2,p{
+            margin: 0%;
+            font-family: sans-serif;
+        }
+        .main-div{
+            background-color: rgb(232, 228, 228);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items:center;
+            padding-bottom: 50px;
+        }
+        #logo{
+            color: #0b66ff;
+            padding: 15px 0px;
+        }
+        .signup-form{
+            background-color: #fff;
+            width: 430px;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .form-heading{
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        h2{
+            padding-bottom: 7px;
+        }
+        .input-field{
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        input,select{
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .half-width{
+            width: 48%;
+            display: flex;
+        }
+        .full-width{
+            width:100%;
+            display: flex;
+        }
+        label{
+            font-size: 12px;
+            padding-bottom: 10px;
+            color: gray;
+        }
+        .dob-div{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .quat-width{
+            width: 31%;
+            display: flex;
+        }
+        .radio-btn{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        .radio-label{
+            padding-bottom: 0%;
+            font-size: 15px;
+        }
+        .radio-input{
+            margin: 0;
+            width: auto;
+        }
+        small{
+            padding-top: 10px;
+            font-size: 11.75px;
+            color: #777;
+        }
+        a{
+            text-decoration: none;
+        }
+        .button-div{
+            padding-top: 15px 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .signup-btn{
+            border: 0;
+            background-color: green;
+            color: white;
+            padding: 8px 55px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 500; 
+        }
+        .account-div{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-top: 30px;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <h1 id="logo">facebook</h1>
+        <form id="signup">
+            <div class="signup-form">
+                <div class="form-heading">
+                    <h2>Create a new account</h2>
+                    <p>its quick and easy.</p>
+                </div>
+                <div class="input-field">
+                    <div class="half-width">
+                        <input type="text" placeholder="first name" name="fname" />
+                    </div>
+                    <div class="half-width">
+                        <input type="text" placeholder="sur name" name="sname" />
+                    </div>
+                    <div class="full-width">
+                        <input type="number" placeholder="mobile number" name="mobile" />
+                    </div>
+                    <div class="full-width">
+                        <input type="password" placeholder="new password" name="password"/>
+                    </div>
+                    <label>Date of birth</label>
+                    <div class="dob-div">
+                        <div class="quat-width">
+                            <select name="day">
+                                <option value="">choose</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <div class="quat-width">
+                            <select name="month">
+                                <option value="">choose</option>
+                                <option value="jan">jan</option>
+                                <option value="feb">feb</option>
+                            </select>
+                        </div>
+                        <div class="quat-width">
+                            <select name="year">
+                                <option value="">choose</option>
+                                <option>1999</option>
+                                <option>1998</option>
+                            </select>
+                        </div>
+                    </div>
+                    <label>Gender</label>
+                    <div class="dob-div"></div>
+                        <div class="quat-width">
+                            <div class="radio-btn">
+                                <label class="radio-label">Female</label>
+                                <input type="radio" class="radio-input" name="Gender"/>
+                            </div>
+                        </div>
+                        <div class="quat-width">
+                            <div class="radio-btn">
+                                <label class="radio-label">Male</label>
+                                <input type="radio" class="radio-input" name="Gender"/>
+                            </div>
+                        </div>
+                        <div class="quat-width">
+                            <div class="radio-btn">
+                                <label class="radio-label">Custom</label>
+                                <input type="radio" class="radio-input" name="Gender"/>
+                            </div>
+                        </div>
+                        <small>
+                            people who use our services may have uploaded your contact information to facebook.<a href="https://wwww.facebook.com" >Learn more</a>.
+                        </small>
+                        <small>
+                            By clicking Sign Up.you agree to our Terms.Privacy Policy and Cookies Policy you may receive SMS notifications from us and can opt out at any time.
+                        </small>
+                        <div class="button-div">
+                            <button class="signup-btn">
+                                sign up
+                            </button>
+                        </div>
+                        <div class="account-div">
+                            <a href="https://wwww.facebook.com ">Already have an account?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#signup').validate({
+            rules: {
+                fname: {
+                    required: true,
+                    minlength: 5,
+                },
+                sname: {
+                    required: true,
+                    minlength: 5,
+                },
+                mobile: {
+                    required: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 8,
+                },
+                day: {
+                    required: true,
+                },
+                month: {
+                    required: true,
+                },
+                year: {
+                    required: true,
+                },
+                Gender: {
+                    required: true,
+                }
+            },
+            messages: {
+                fname: {
+                    required: "please enter the first name",
+                    minlength: "please enter minimum 5 letters for first name"
+                }
+            }
+        })
+    });
+</script>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerse Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-family: 'poppins', sans-serif;
+        }
+        .navbar{
+            display: flex;
+            padding: 40px;
+            background-color: antiquewhite;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .lists{
+            right: 40%;
+            word-spacing: 30px;
+            text-decoration: none;
+        }
+        .lists a{
+            text-decoration: none;
+            color: black;
+        }
+        .list a:hover{
+            text-decoration: underline;
+        }
+        .navbar-menu-toggle{
+            display: none;
+        }
+        .side-lists{
+            background-color: black;
+            width: 50%;
+            height: 100%;
+            position: fixed;
+            top: 0%;
+            left: 0;
+            padding: 20px;
+        }
+        .side-list{
+            margin-bottom: 30px;
+        }
+        .side-list a{
+            text-decoration: none;
+            color: white;
+        }
+        .side-list a:hover{
+            text-decoration: underline;
+        }
+        .header{
+            display: flex;
+            padding: 50px;
+            gap: 50px;
+            justify-content: center;
+        }
+        .header-button{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .header-image{
+            width: 300px;
+            height: 300px;
+        }
+        .services{
+            padding: 20px;
+        }
+        .service-container-1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .service-container-2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .service-container-2 div{
+            background-color: gainsboro;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .new-arrival-image{
+            width: 200px;
+            height: 200px;
+        }
+        .new-arrival{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .new-arrival-container{
+            position: relative;
+            flex-basis: 20%;
+        }
+        .new-arrival button{
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            margin-top: 10%;
+            color: #1D232c;
+            position:absolute;
+            top: 50%;
+            left: 18%;
+            border-radius: 10px;
+            border: none;
+        }
+        .news{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .news input{
+            padding: 11px;
+            width: 80vw;
+            margin-bottom: 10px;
+            border: solid black 3px;
+        }
+        .news button{
+            margin-top: 10px;
+            color: #f2f4f7;
+            background-color: #1D232c;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .footer{
+            margin-top: 40px;
+            padding: 40px;
+            background-color: #1D232c;
+            color: #f2f4f7;
+        }
+        .product-section{
+            margin: 100px;
+        }
+        .product-search{
+            width: 80%;
+            border: solid black 2px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: auto;
+        }
+        .product-search input{
+            border: none;
+            background-color: transparent;
+            width: 100%;
+        }
+        .product-search input:focus{
+            outline: none;
+        }
+        .products{
+            margin-top: 20px;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product-box{
+            text-align: center;
+            flex-basis: 20%;
+        }
+        .product-box img{
+            border-radius: 10px;
+        }
+        .news{
+            margin: 100px;
+            gap: 20px;
+        }
+        .section{
+            padding: 10px;
+            background-color: bisque;
+        }
+        .Arrival{
+            padding: 50px;
+        }
+        .front{
+            padding: 10px;
+            align-items: center;
+        }
+        .form-container{
+            background-color: black;
+            color: white;
+            width: 500px;
+            height: 500px;
+            padding: 50px;
+            border-radius: 10px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .form-container h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form input{
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .form button{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 100px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form button:hover{
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Fashion new</h1>
+           <div class="lists" >
+            <ul>
+                <l class="list"><a href="#home">Home</a></l>
+                <l class="list"><a href="#about">About</a></l>
+                <l class="list"><a href="#collections">Collections</a></l>
+                <l class="list"><a href="#search">Search</a></l>
+                <l class="list"><a href="#contact">Contact</a></l>
+            </ul>
+           </div>
+    </nav>
+    <section id="home" class="front">
+        <div class="header">
+            <div>
+                <h1>Level up your style</h1>
+                <p>with our stunning Collections</p>
+                <button class="header-button">Shop now</button>
+            </div>
+            <div class="image">
+                <img class="header-image" src="https://plus.unsplash.com/premium_photo-1664202526559-e21e9c0fb46a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="about" class="service">
+        <div class="services">
+            <div class="service-container-1">
+                <div>
+                    <h2>We Provide Best</h2>
+                    <h2>Customer Experience</h2>
+                </div>
+                <div>
+                    <p>||We ensure that our customer have the best shopping Experience</p>
+                </div>
+            </div>
+            <div class="service-container-2">
+                <div>
+                    <i class="fa-regular fa-face-smile"></i>
+                    <div class="space">
+                    <h4>Satisfaction Guarantee</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi harum necessitatibus, culpa sint similique officia tempora, unde rerum voluptates distinctio dignissimos ad accusamus perspiciatis ab amet est assumenda ducimus.</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-regular fa-face-smile"></i>
+                    <div class="space">
+                    <h4>New Arrival Everyday</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi harum necessitatibus, culpa sint similique officia tempora, unde rerum voluptates distinctio dignissimos ad accusamus perspiciatis ab amet est assumenda ducimus.</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-regular fa-face-smile"></i>
+                    <div class="space">
+                    <h4>fast & free shipping</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae animi harum necessitatibus, culpa sint similique officia tempora, unde rerum voluptates distinctio dignissimos ad accusamus perspiciatis ab amet est assumenda ducimus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="collections" class="Arrival">
+        <div>
+            <h2 style="padding: 20px;">New Arrival</h2>
+            <div class="new-arrival">
+                <div class="new-arrival-container">
+                    <img class="new-arrival-image" src="https://www.cato.org/sites/cato.org/files/styles/optimized/public/2023-11/fast-fashion2.jpeg?itok=qCMa7eGV" alt="">
+                    <button>Shop now</button>
+                </div>
+                <div class="new-arrival-container">
+                    <img class="new-arrival-image" src="https://images.unsplash.com/photo-1485125639709-a60c3a500bf1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <button>Shop now</button>
+                </div>
+                <div class="new-arrival-container">
+                    <img class="new-arrival-image" src="https://images.unsplash.com/photo-1603251578711-3290ca1a0187?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <button>Shop now</button>
+                </div>
+                <div class="new-arrival-container">
+                    <img class="new-arrival-image" src="https://wallpaperaccess.com/full/2489679.jpg" alt="">
+                    <button>Shop now</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2 style="padding: 20px;">Most Wanted</h2>
+            <div class="new-arrival">
+                <div class="new-arrival-container">
+                    <img class="new-arrival-image" src="C:\Users\shakt\Downloads\th-removebg-preview.png" alt="">
+                    <button>Shop now</button>
+                </div>
+                <div class="new-arrival-container">
+                    <img class="new-arrival-image" src="https://tse1.mm.bing.net/th?id=OIP.KIYSMuVG0SRU7w8qWEYbJgAAAA&pid=Api&P=0&h=180" alt="">
+                    <button>Shop now</button>
+                </div>
+                <div class="new-arrival-container">
+                    <img class="new-arrival-image" src="https://i5.walmartimages.com/asr/c33bb859-28b0-48cb-a10c-f875059fd86a_1.d6d7413a3f0147ff6abfebc0a824b8ac.jpeg" alt="">
+                    <button>Shop now</button>
+                </div>
+                <div class="new-arrival-container">
+                    <img class="new-arrival-image" src="https://tse1.mm.bing.net/th?id=OIP.B-5Q8O8xpLnKTLbQL7m7VQHaHa&pid=Api&P=0&h=180" alt="">
+                    <button>Shop now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="search" class="section">
+        <div class="product-section">
+            <form class="product-search">
+                <input type="text" id="search" placeholder="search">
+            </form>
+            <div class="products" id="product">
+                <div class="product-box">
+                    <img style="width: 200px; height: 200px;" src="https://www.theuniformedit.com.au/app/uploads/2019/02/Everyday-Basic-Men-Uniform-Shirt-White-Long-Sleeve-V2.Squashwhite-737x1024.jpg">
+                    <p>White Shirt</p>
+                </div>
+                <div class="product-box">
+                    <img style="width: 200px; height: 200px;" src="https://admin.kaufmannstatic.com/Images/180933_sort_01-T20221130084429.jpg?i=180933_sort_01-T20221130084429.jpg&w=undefined&h=undefined&bgcolor=f4f5f2">
+                    <p>black Shirt</p>
+                </div>
+                <div class="product-box">
+                    <img style="width: 200px; height: 200px;" src="https://i5.walmartimages.com/asr/7dbcea5d-9eae-403c-b249-4e49739cd729_1.ade5356646c5f800d706b77ddee5962d.jpeg">
+                    <p>Red Shirt</p>
+                </div>
+                <div class="product-box">
+                    <img style="width: 200px; height: 200px;" src="https://media.endclothing.com/media/f_auto,q_auto:eco/prodmedia/media/catalog/product/2/0/20-09-2016_individualizedshirts_brushedcheckshirt_blackgrey_q05gtp_cj_1.jpg">
+                    <p>checked Shirt</p>
+                </div>
+                <div class="product-box">
+                    <img style="width: 200px; height: 200px;" src="https://www.the-streets.co.uk/wp-content/uploads/2021/02/fohemr-Mens-Floral-Printed-Dress-Shirts-Long-Sleeve-Vintage-Flower-Casual-Button-Down-Shirt-Cotton.jpg">
+                    <p>printed Shirt</p>
+                </div>
+                <div class="product-box">
+                    <img style="width: 200px; height: 200px;" src="https://tse2.mm.bing.net/th?id=OIP.goZ1si1AG0CvBG1pO3utQQHaGs&pid=Api&P=0&h=180">
+                    <p>t-shirt</p>
+                </div>
+                <div class="product-box">
+                    <img style="width: 200px; height: 200px;" src="https://tse3.mm.bing.net/th?id=OIP.KZYxfGWGb-siGhij098CqAHaKR&pid=Api&P=0&h=180">
+                    <p>coat suit</p>
+                </div>
+                <div class="product-box">
+                    <img style="width: 200px; height: 200px;" src="https://tse2.mm.bing.net/th?id=OIP.lv0EPd1nBuCYkbrIwuL5VQHaJE&pid=Api&P=0&h=180">
+                    <p>Hoodie Shirt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="news">
+        <h2>Join our news letter</h2>
+        <p>Signup for our email newsletter to get exclusive discounts and updates and more.</p>
+        <div>
+            <input type="text" class="search" placeholder="search" onkeyup="event">
+        </div>
+        <div>
+            <button>Subscribe</button>
+        </div>
+    </div>
+    <div id="contact" class="container">
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form class="form">
+                    <h3>Name:</h3>
+                    <input type="text">
+                    <h3>E-mail:</h3>
+                    <input type="email">
+                    <h3>Message:</h3>
+                    <input type="text">
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+                <h2 class="headingtext">Fashion new</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sed optio quae incidunt quos ducimus illum iste ullam at harum possimus, similique blanditiis beatae, nesciunt aliquid corporis perspiciatis amet repellendus.</p>
+                <div class="footer-icon-container">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            </div>
+        </div>
+        <p>@ 2024 Nostra.com</p>
+    </div>
+</body>
+<script>
+    var enteredText = document.querySelector(".search")
+    function check(event)
+    {
+        enteredText = event.target.value
+        for(i=0;i<elements.length;i++)
+    {
+        if(elements[i].textcontent.indexof(enteredText) < 0)
+    {
+        elements[i].style.display = "none"
+    }
+    else
+    {
+        elements[i].style.display = "block"
+    }
+    }
+    }
+    var productcontainer = document.getElementById("product")
+    var search = document.getElementById("search")
+    var productlist = productcontainer.querySelectorAll("div")
+    
+    search.addEventListener("keyup",function(){
+        var enteredValue = event.target.value.toUppercase()
+        for(count=0;count<productlist.length;count=count+1)
+    {
+        var productname = productlist[count].querySelector("p").textContent
+        
+        if(productname.toUpperCase().indexOf(enteredValue)<0)
+        {
+        productlist[count].style.display = "block"
+        }
+    else{
+        productlist[count].style.display = "none"
+        }
+    }
+    })
+</script>
+</html>
